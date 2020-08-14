@@ -6,11 +6,14 @@ node {
           
         }
         stage('Compile Stage') {
-            
-            
-                mvnhome = tool 'M2_HOME'/bin/mvn
+
+                mvnhome = tool 'M2_HOME'
                 echo mvnhome
-                echo 'hello' 
+         
+               withMaven(maven: 'M2_HOME') {
+               sh "'$(mvnhome)/bin/mvn' clean package install"
+         }
+        }
              
 }
 }
