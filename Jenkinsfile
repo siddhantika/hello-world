@@ -8,7 +8,7 @@ node {
         stage('Compile Stage') {
             
             
-                mvnhome = tool 'M2_HOME'
+                mvnhome = tool 'M2_HOME'/bin/mvn
                 echo mvnhome
             
 }
