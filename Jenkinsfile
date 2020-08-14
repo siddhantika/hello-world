@@ -11,7 +11,7 @@ node {
                 echo mvnhome
          
                withMaven(maven: 'M2_HOME') {
-               sh "'$(mvnhome)/bin/mvn' clean package install"
+                sh "'${mvnhome}bin/mvn' clean package install"
          }
         }
              
