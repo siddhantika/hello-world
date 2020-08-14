@@ -15,6 +15,9 @@ node {
                 
          }
         }
+ stage('deployment'){
+  sshPublisher(publishers: [sshPublisherDesc(configName: 'jenkins-deploy-tomat', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '/webapp/target', sourceFiles: '**/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+ }
              
 }
 
