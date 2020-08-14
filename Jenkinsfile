@@ -10,6 +10,7 @@ node {
             
                 mvnhome = tool 'M2_HOME'/bin/mvn
                 echo mvnhome
-            
+                echo 'hello' 
+             
 }
 }
